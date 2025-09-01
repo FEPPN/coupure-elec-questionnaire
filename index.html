@@ -1,14 +1,371 @@
-<div id="diagnostic-wrapper" style="max-width:600px;margin:2em auto;font-family:sans-serif;background:#fff;padding:20px;border-radius:12px;box-shadow:0 8px 16px rgba(0,0,0,0.1);line-height:1.6;color:#333;"><div id="diagnostic-intro" style="text-align:center;"><h2 style="color:#5A52FF;"> Coupure d’électricité ?	&#x26A1;</h2><p>Découvrez en quelques clics si la coupure vient de chez vous ou de votre quartier.</p>
-<a href="#" class="diag-btn" style="color:#ffffff !important;" onclick="document.getElementById('diagnostic-intro').style.display='none'; document.getElementById('q1').style.display='block'; return false;">Démarrer le diagnostic</a></div><div id="q1" style="display:none;"><p><strong>Vos voisins ont-ils encore de l’électricité ?</strong></p>
-<a href="#" class="diag-btn" onclick="document.getElementById('q1').style.display='none'; document.getElementById('q2a').style.display='block'; return false;">Oui</a>
-<a href="#" class="diag-btn" onclick="document.getElementById('q1').style.display='none'; document.getElementById('q2b').style.display='block'; return false;">Non</a><div class="diag-nav-group" style="justify-content: center;"><a href="#" class="diag-nav" onclick="document.querySelectorAll('#diagnostic-wrapper > div').forEach(el => el.style.display = 'none'); document.getElementById('diagnostic-intro').style.display = 'block'; document.getElementById('result-text').innerHTML = 'Résultat ici'; return false;">↻ Recommencer</a></div></div><div id="q2a" style="display:none;"><p><strong>Votre disjoncteur est-il déclenché (baissé) ?</strong></p>
-<a href="#" class="diag-btn" onclick="document.getElementById('q2a').style.display='none'; document.getElementById('q3a').style.display='block'; return false;">Oui</a>
-<a href="#" class="diag-btn" onclick="document.getElementById('q2a').style.display='none'; document.getElementById('a4').style.display='block'; return false;">Non</a><div class="diag-nav-group" style="justify-content: center;"><a href="#" class="diag-nav" onclick="document.querySelectorAll('#diagnostic-wrapper > div').forEach(el => el.style.display = 'none'); document.getElementById('diagnostic-intro').style.display = 'block'; document.getElementById('result-text').innerHTML = 'Résultat ici'; return false;">↻ Recommencer</a></div></div><div id="q3a" style="display:none;"><p><strong>Lorsque vous le remontez, saute-t-il à nouveau ?</strong></p>
-<a href="#" class="diag-btn" onclick="document.getElementById('q3a').style.display='none'; document.getElementById('diagnostic-result').style.display='block'; document.getElementById('result-text').innerHTML=' Un appareil est probablement en cause. Débranchez-les un par un et refaites le test.'; return false;">Oui</a>
-<a href="#" class="diag-btn" onclick="document.getElementById('q3a').style.display='none'; document.getElementById('diagnostic-result').style.display='block'; document.getElementById('result-text').innerHTML=' Le problème semble résolu. Il s’agissait sûrement d’une surtension ponctuelle.'; return false;">Non</a><div class="diag-nav-group" style="justify-content: center;"><a href="#" class="diag-nav" onclick="document.querySelectorAll('#diagnostic-wrapper > div').forEach(el => el.style.display = 'none'); document.getElementById('diagnostic-intro').style.display = 'block'; document.getElementById('result-text').innerHTML = 'Résultat ici'; return false;">↻ Recommencer</a></div></div><div id="a4" style="display:none;"><p style="font-weight:bold;"> Contactez un électricien ou votre fournisseur. Il peut s’agir d’un défaut technique interne.</p><div style="background:#f2f2ff;padding:1em;border:1px solid #d8d5ff;border-radius:10px;margin-top:1.5em;"><p style="margin:0;">Problème résolu ? Vous pouvez en profiter pour comparer les offres d'électricité !</p><p><strong> Contactez Papernest au <a href="tel:0182909893" style="color:#5A52FF;text-decoration:underline;">01 82 90 98 93</a></strong> (service gratuit) pour faire des économies et changer de fournisseur en 5 minutes.</p></div><div class="diag-nav-group" style="justify-content: center;"><a href="#" class="diag-nav" onclick="document.querySelectorAll('#diagnostic-wrapper > div').forEach(el => el.style.display = 'none'); document.getElementById('diagnostic-intro').style.display = 'block'; document.getElementById('result-text').innerHTML = 'Résultat ici'; return false;">↻ Recommencer</a></div></div><div id="q2b" style="display:none;"><p><strong>Votre disjoncteur est-il déclenché ?</strong></p>
-<a href="#" class="diag-btn" onclick="document.getElementById('q2b').style.display='none'; document.getElementById('q3b').style.display='block'; return false;">Oui</a>
-<a href="#" class="diag-btn" onclick="document.getElementById('q2b').style.display='none'; document.getElementById('q4').style.display='block'; return false;">Non</a><div class="diag-nav-group" style="justify-content: center;"><a href="#" class="diag-nav" onclick="document.querySelectorAll('#diagnostic-wrapper > div').forEach(el => el.style.display = 'none'); document.getElementById('diagnostic-intro').style.display = 'block'; document.getElementById('result-text').innerHTML = 'Résultat ici'; return false;">↻ Recommencer</a></div></div><div id="q3b" style="display:none;"><p><strong>Lorsque vous le remontez, le courant revient-il ?</strong></p>
-<a href="#" class="diag-btn" onclick="document.getElementById('q3b').style.display='none'; document.getElementById('diagnostic-result').style.display='block'; document.getElementById('result-text').innerHTML=' Il s’agissait d’une coupure locale interne à votre logement.'; return false;">Oui</a>
-<a href="#" class="diag-btn" onclick="document.getElementById('q3b').style.display='none'; document.getElementById('q4').style.display='block'; return false;">Non</a><div class="diag-nav-group" style="justify-content: center;"><a href="#" class="diag-nav" onclick="document.querySelectorAll('#diagnostic-wrapper > div').forEach(el => el.style.display = 'none'); document.getElementById('diagnostic-intro').style.display = 'block'; document.getElementById('result-text').innerHTML = 'Résultat ici'; return false;">↻ Recommencer</a></div></div><div id="q4" style="display:none;"><p><strong>Une coupure est-elle signalée dans votre quartier ?</strong></p>
-<a href="#" class="diag-btn" onclick="document.getElementById('q4').style.display='none'; document.getElementById('diagnostic-result').style.display='block'; document.getElementById('result-text').innerHTML=' Il s’agit d’une coupure généralisée ou programmée. Patientez jusqu’à la remise en service.'; return false;">Oui</a>
-<a href="#" class="diag-btn" onclick="document.getElementById('q4').style.display='none'; document.getElementById('diagnostic-result').style.display='block'; document.getElementById('result-text').innerHTML='  Contactez Enedis au 09 726 750 XX (les deux  premiers numéros de votre département) pour en savoir plus sur votre secteur.'; return false;">Non</a><div class="diag-nav-group" style="justify-content: center;"><a href="#" class="diag-nav" onclick="document.querySelectorAll('#diagnostic-wrapper > div').forEach(el => el.style.display = 'none'); document.getElementById('diagnostic-intro').style.display = 'block'; document.getElementById('result-text').innerHTML = 'Résultat ici'; return false;">↻ Recommencer</a></div></div><div id="diagnostic-result" style="display:none;"><p id="result-text" style="font-weight:bold;font-size:1.1em;color:#333;">Résultat ici</p><div style="background:#f2f2ff;padding:1em;border:1px solid #d8d5ff;border-radius:10px;margin-top:1.5em;"><p style="margin:0;">Problème résolu ? Vous pouvez en profiter pour comparer les offres d'électricité !</p><p><strong> Contactez Papernest au <a href="tel:0970252139" style="color:#5A52FF;text-decoration:underline;">09 70 25 21 39</a></strong> (service gratuit) pour faire des économies et changer de fournisseur en 5 minutes.</p></div><div class="diag-nav-group" style="justify-content: center;"><a href="#" class="diag-nav" onclick="document.querySelectorAll('#diagnostic-wrapper > div').forEach(el => el.style.display = 'none'); document.getElementById('diagnostic-intro').style.display = 'block'; document.getElementById('result-text').innerHTML = 'Résultat ici'; return false;">↻ Recommencer</a></div></div><style>.diag-btn {display: block;margin: 10px 0;padding: 12px;background: #4339f2;color: white !important;text-align: center;border-radius: 8px;text-decoration: none;font-weight: bold;} .diag-btn:hover {background: #2e26c9;} .diag-nav-group {display: flex;justify-content: space-between;margin-top: 20px;} .diag-nav {text-decoration: underline;color: #5A52FF;font-size: 0.95em;} @media screen and (max-width: 600px) {#diagnostic-wrapper {padding: 15px;} .diag-btn {font-size: 0.95em;padding: 10px;} .diag-nav-group {flex-direction: column;align-items: center;gap: 10px;}}</style></div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Diagnostic coupure d'électricité</title>
+  <meta name="description" content="Parcours simple pour diagnostiquer l'origine d'une coupure d'électricité : logement ou quartier.">
+  <style>
+    :root {
+      --bg: #f7f7fb;
+      --card: #ffffff;
+      --text: #2d2d33;
+      --muted: #6b6b76;
+      --brand: #4339f2;
+      --brand-600: #2e26c9;
+      --accent-bg: #f2f2ff;
+      --accent-border: #d8d5ff;
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      --focus: 2px solid #8fa2ff;
+    }
+
+    html, 
+    body { 
+      height: 100%; 
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: min(6vh, 3rem) auto;
+      padding: clamp(16px, 3vw, 28px);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: clamp(18px, 3.5vw, 28px);
+    }
+
+    h1, 
+    h2, 
+    h3 { 
+      line-height: 1.25; 
+      margin: 0 0 .25em; 
+    }
+
+    h1 { 
+      font-size: clamp(1.25rem, 1rem + 1.6vw, 1.9rem); 
+    }
+
+    p { 
+      margin: .25em 0 1em; 
+      color: var(--text); 
+    }
+
+    .muted { 
+      color: var(--muted); 
+    }
+
+    .emoji { 
+      font-style: normal; 
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px 14px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: transform .06s ease, background .2s ease;
+    }
+
+    .btn:hover { 
+      background: var(--brand-600); 
+    }
+
+    .btn:active { 
+      transform: translateY(1px); 
+    }
+
+    .btn:focus-visible { 
+      outline: var(--focus); 
+      outline-offset: 3px; 
+    }
+
+    .nav-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .link {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      text-decoration: underline;
+      color: var(--brand);
+      font-size: .95rem;
+      cursor: pointer;
+    }
+
+    .link:focus-visible { 
+      outline: var(--focus); 
+      border-radius: 6px; 
+    }
+
+    .tip {
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .flow > * + * { 
+      margin-top: .75rem; 
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px; 
+      height: 1px;
+      padding: 0; 
+      margin: -1px; 
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0); 
+      white-space: nowrap; 
+      border: 0;
+    }
+
+    [hidden] { 
+      display: none !important; 
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .step { 
+        animation: fade .18s ease-out; 
+      }
+
+      @keyframes fade { 
+        from { 
+          opacity: .5; 
+          transform: translateY(2px); 
+        } 
+        to { 
+          opacity: 1; 
+          transform: none; 
+        } 
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e0f13;
+        --card: #141620;
+        --text: #e7e7ef;
+        --muted: #a5a6b0;
+        --brand: #6a62ff;
+        --brand-600: #8b85ff;
+        --accent-bg: #1b1f32;
+        --accent-border: #2a2f52;
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+        --focus: 2px solid #9fb2ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section class="card" aria-labelledby="title">
+      <header class="flow" style="text-align: center">
+        <h1 id="title">Coupure d'électricité ? <span class="emoji" aria-hidden="true">⚡️</span></h1>
+        <p class="muted">Découvrez en quelques clics si la coupure vient de chez vous ou de votre quartier.</p>
+        <button class="btn" id="startBtn" type="button">Démarrer le diagnostic</button>
+      </header>
+
+      <!-- Steps -->
+      <div id="steps" class="flow" aria-live="polite" aria-atomic="true">
+        <!-- Q1 -->
+        <section class="step" id="q1" hidden>
+          <p><strong>Vos voisins ont-ils encore de l'électricité&nbsp;?</strong></p>
+          <div class="actions">
+            <button class="btn" data-next="q2a" type="button">Oui</button>
+            <button class="btn" data-next="q2b" type="button">Non</button>
+          </div>
+          <div class="nav-group">
+            <button class="link" data-restart type="button">↻ Recommencer</button>
+          </div>
+        </section>
+
+        <!-- Q2A -->
+        <section class="step" id="q2a" hidden>
+          <p><strong>Votre disjoncteur est-il déclenché (baissé)&nbsp;?</strong></p>
+          <button class="btn" data-next="q3a" type="button">Oui</button>
+          <button class="btn" data-next="a4" type="button">Non</button>
+          <div class="nav-group">
+            <button class="link" data-restart type="button">↻ Recommencer</button>
+          </div>
+        </section>
+
+        <!-- Q3A -->
+        <section class="step" id="q3a" hidden>
+          <p><strong>Lorsque vous le remontez, saute‑t‑il à nouveau&nbsp;?</strong></p>
+          <button class="btn" data-result=" Un appareil est probablement en cause. Débranchez-les un par un et refaites le test.">Oui</button>
+          <button class="btn" data-result=" Le problème semble résolu. Il s'agissait sûrement d'une surtension ponctuelle.">Non</button>
+          <div class="nav-group">
+            <button class="link" data-restart type="button">↻ Recommencer</button>
+          </div>
+        </section>
+
+        <!-- A4 (no breaker down) -->
+        <section class="step" id="a4" hidden>
+          <p><strong>Contactez un électricien ou votre fournisseur.</strong> Il peut s'agir d'un défaut technique interne.</p>
+          <div class="tip">
+            <p style="margin: 0">Problème résolu&nbsp;? Vous pouvez en profiter pour comparer les offres d'électricité&nbsp;!</p>
+            <p><strong>Contactez Papernest au <a href="tel:0182909893">01&nbsp;82&nbsp;90&nbsp;98&nbsp;93</a></strong> (service gratuit) pour faire des économies et changer de fournisseur en 5 minutes.</p>
+          </div>
+          <div class="nav-group">
+            <button class="link" data-restart type="button">↻ Recommencer</button>
+          </div>
+        </section>
+
+        <!-- Q2B -->
+        <section class="step" id="q2b" hidden>
+          <p><strong>Votre disjoncteur est-il déclenché&nbsp;?</strong></p>
+          <button class="btn" data-next="q3b" type="button">Oui</button>
+          <button class="btn" data-next="q4" type="button">Non</button>
+          <div class="nav-group">
+            <button class="link" data-restart type="button">↻ Recommencer</button>
+          </div>
+        </section>
+
+        <!-- Q3B -->
+        <section class="step" id="q3b" hidden>
+          <p><strong>Lorsque vous le remontez, le courant revient‑il&nbsp;?</strong></p>
+          <button class="btn" data-result=" Il s'agissait d'une coupure locale interne à votre logement.">Oui</button>
+          <button class="btn" data-next="q4" type="button">Non</button>
+          <div class="nav-group">
+            <button class="link" data-restart type="button">↻ Recommencer</button>
+          </div>
+        </section>
+
+        <!-- Q4 -->
+        <section class="step" id="q4" hidden>
+          <p><strong>Une coupure est‑elle signalée dans votre quartier&nbsp;?</strong></p>
+          <button class="btn" data-result=" Il s'agit d'une coupure généralisée ou programmée. Patientez jusqu'à la remise en service.">Oui</button>
+          <button class="btn" data-result="  Contactez Enedis au 09&nbsp;726&nbsp;750&nbsp;XX (les deux premiers numéros de votre département) pour en savoir plus sur votre secteur.">Non</button>
+          <div class="nav-group">
+            <button class="link" data-restart type="button">↻ Recommencer</button>
+          </div>
+        </section>
+
+        <!-- RESULT -->
+        <section class="step" id="result" hidden>
+          <p id="resultText" class="result-text" style="font-weight: 700; font-size: 1.1em"></p>
+          <div class="tip">
+            <p style="margin: 0">Problème résolu&nbsp;? Vous pouvez en profiter pour comparer les offres d'électricité&nbsp;!</p>
+            <p><strong>Contactez Papernest au <a href="tel:0970252139">09&nbsp;70&nbsp;25&nbsp;21&nbsp;39</a></strong> (service gratuit) pour faire des économies et changer de fournisseur en 5 minutes.</p>
+          </div>
+          <div class="nav-group">
+            <button class="link" data-restart type="button">↻ Recommencer</button>
+          </div>
+        </section>
+      </div>
+
+      <!-- Live region for screen readers only -->
+      <p id="announcements" class="sr-only" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script>
+    // Diagnostic logic
+    const startBtn = document.getElementById('startBtn');
+    const steps = document.getElementById('steps');
+    const header = document.querySelector('header');
+    const announcements = document.getElementById('announcements');
+
+    let currentStep = null;
+
+    // Start diagnostic
+    startBtn.addEventListener('click', () => {
+      showStep('q1');
+      header.style.display = 'none';
+      announcements.textContent = 'Diagnostic démarré. Première question affichée.';
+    });
+
+    // Handle step navigation
+    steps.addEventListener('click', (e) => {
+      const button = e.target.closest('button');
+      if (!button) return;
+
+      if (button.hasAttribute('data-next')) {
+        const nextStep = button.getAttribute('data-next');
+        showStep(nextStep);
+        announcements.textContent = `Question suivante affichée.`;
+      } else if (button.hasAttribute('data-result')) {
+        const result = button.getAttribute('data-result');
+        showResult(result);
+        announcements.textContent = `Résultat du diagnostic affiché.`;
+      } else if (button.hasAttribute('data-restart')) {
+        restart();
+        announcements.textContent = `Diagnostic redémarré.`;
+      }
+    });
+
+    function showStep(stepId) {
+      // Hide current step
+      if (currentStep) {
+        currentStep.hidden = true;
+      }
+
+      // Show new step
+      currentStep = document.getElementById(stepId);
+      if (currentStep) {
+        currentStep.hidden = false;
+      }
+    }
+
+    function showResult(resultText) {
+      // Hide current step
+      if (currentStep) {
+        currentStep.hidden = true;
+      }
+
+      // Show result
+      const resultStep = document.getElementById('result');
+      const resultTextEl = document.getElementById('resultText');
+      
+      resultTextEl.textContent = resultText.trim();
+      resultStep.hidden = false;
+      currentStep = resultStep;
+    }
+
+    function restart() {
+      // Hide current step
+      if (currentStep) {
+        currentStep.hidden = true;
+      }
+      
+      // Show header again
+      header.style.display = 'block';
+      currentStep = null;
+    }
+
+    // Handle keyboard navigation for accessibility
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && currentStep) {
+        restart();
+        announcements.textContent = 'Diagnostic abandonné. Retour à l\'accueil.';
+      }
+    });
+  </script>
+</body>
+</html>
